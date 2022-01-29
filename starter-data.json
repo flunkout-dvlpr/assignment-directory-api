@@ -1,0 +1,12 @@
+{
+    "employees": [
+        {
+            "name": "Lisbet",
+            "phone": "310-555-1212"
+        },
+        {
+            "name": "Dominik",
+            "phone": "916-555-0123"
+        }
+    ]
+}
