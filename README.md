@@ -11,7 +11,7 @@ phone directory.
    what is necessary to understand and run your code.
 4. Add any notes about difficulties you had or choices that you made under the
    `Dev Notes` section in this README.
-5. When you are done, push your changes to your repo and a link back to the
+5. When you are done, push your changes to your repo and send the link back to the
    recruiter. 
 
 You are not required to deploy your code, but you are expected to make sure it
@@ -64,8 +64,13 @@ you would go about improving it and then implement at least a few:
 
 - Add your ideas here
 
+# Setup and running
+
+1. Install dependencies with `pip install -R -U requirements.txt`
+2. Run with `python app.py`
+
 # Testing
 
-Please explain how your code can be run and tested.
+Please explain how your code can be tested.
 
 # Dev Notes
