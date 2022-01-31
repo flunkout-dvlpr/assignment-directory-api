@@ -31,7 +31,7 @@ of the following features:
 
 - List all employees
 - Add a new employee
-- Update an existing employees name or phone number
+- Update an existing employee's name or phone number
 - Delete an existing employee
 
 You need to only create the server and do not need to add any frontend UI to
