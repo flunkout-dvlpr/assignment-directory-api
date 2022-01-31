@@ -66,7 +66,7 @@ you would go about improving it and then implement at least a few:
 
 # Setup and running
 
-1. Install dependencies with `pip install -R -U requirements.txt`
+1. Install dependencies with `pip install -U -r requirements.txt`
 2. Run with `python app.py`
 
 # Testing
