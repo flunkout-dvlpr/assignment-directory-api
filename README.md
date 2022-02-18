@@ -74,3 +74,4 @@ you would go about improving it and then implement at least a few:
 Please explain how your code can be tested.
 
 # Dev Notes
+- Installed flask_restful, an extension of flask to quickly build apis with minimal serup
