@@ -74,4 +74,5 @@ you would go about improving it and then implement at least a few:
 Please explain how your code can be tested.
 
 # Dev Notes
-- Installed flask_restful, an extension of flask to quickly build apis with minimal serup
+- Installed flask_restful, an extension of flask to quickly build apis with minimal setup
+- Installed pandas to handle and modify data from json file
