@@ -33,6 +33,9 @@ class Employees(Resource):
         args = parser.parse_args()
         body = args["employee"]
 
+        if '-' not in body["phone"]:
+            body["phone"] = "{}-{}-{}".format(body["phone"][0:3],body["phone"][3:6],body["phone"][6:10])
+
         #Create datatframe and append new employee object
         dataFrame = pd.DataFrame.from_dict(data)
         dataFrame = dataFrame.append(body, ignore_index=True)
@@ -41,7 +44,23 @@ class Employees(Resource):
         response = dataFrame.to_dict("records")
         updateFile(JSON_FILE, response)
 
+        return response, 201
+
+    def delete(self):
+        data = readFile(JSON_FILE)
+        args = parser.parse_args()
+        body = args["employee"]
+
+        for idx, employee in enumerate(data):
+            if employee["name"].lower() == body['name'].lower():
+                del data[idx]
+
+        dataFrame = pd.DataFrame.from_dict(data)
+        response = dataFrame.to_dict("records")
+        updateFile(JSON_FILE, response)
+
         return response, 200
+
 
 class Employee(Resource):
 
@@ -61,6 +80,8 @@ class Employee(Resource):
 
         for idx, employee in enumerate(data):
             if employee["name"].lower() == body['name'].lower():
+                if '-' not in body["phone"]:
+                    body["phone"] = "{}-{}-{}".format(body["phone"][0:3],body["phone"][3:6],body["phone"][6:10])
                 data[idx] = body
 
         dataFrame = pd.DataFrame.from_dict(data)
@@ -69,7 +90,7 @@ class Employee(Resource):
 
         return response, 200
 
-api.add_resource(Employee, "/employee", "/employee/<name>")
+api.add_resource(Employee, "/employee", "/employee-update/<name>")
 api.add_resource(Employees, "/", "/employees")
 
 
