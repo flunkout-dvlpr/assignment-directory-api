@@ -62,7 +62,9 @@ see?
 You do not have to implement all of these ideas, but please list out ways
 you would go about improving it and then implement at least a few:
 
-- Add your ideas here
+- Get employee by name or phone
+- Create clasess to structure endpoints
+- Format phone number on create and update
 
 # Setup and running
 
@@ -76,3 +78,10 @@ Please explain how your code can be tested.
 # Dev Notes
 - Installed flask_restful, an extension of flask to quickly build apis with minimal setup
 - Installed pandas to handle and modify data from json file
+
+### Endpoints
+- Get All Employees: GET `/employees` or `/`
+- Get Employee: GET `/employee/name`
+- Create Employee: POST `/employees` and body
+- Update Employee: POST `/employee-update` and body
+- Delete Employee: DELETE `/employees`and body
