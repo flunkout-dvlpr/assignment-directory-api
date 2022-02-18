@@ -78,6 +78,7 @@ Please explain how your code can be tested.
 # Dev Notes
 - Installed flask_restful, an extension of flask to quickly build apis with minimal setup
 - Installed pandas to handle and modify data from json file
+- Local development and testing can be acomplished using [Postman](https://www.postman.com/) and the endpoints listed below
 
 ### Endpoints
 - Get All Employees: GET `/employees` or `/`
@@ -85,3 +86,6 @@ Please explain how your code can be tested.
 - Create Employee: POST `/employees` and body
 - Update Employee: POST `/employee-update` and body
 - Delete Employee: DELETE `/employees`and body
+
+![Example](postman-test.jpg)
+
