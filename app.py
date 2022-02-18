@@ -43,6 +43,18 @@ class Employees(Resource):
 
         return response, 200
 
+class Employee(Resource):
+
+    def get(self, name):
+        data = readFile(JSON_FILE)
+        for e in data:
+            if e["name"].lower() == name.lower():
+                match = e
+            else:
+                match = {}
+        return match, 200
+
+api.add_resource(Employee, "/employee", "/employee/<name>")
 api.add_resource(Employees, "/", "/employees")
 
 
