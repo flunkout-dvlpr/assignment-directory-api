@@ -54,6 +54,21 @@ class Employee(Resource):
                 match = {}
         return match, 200
 
+    def post(self):
+        data = readFile(JSON_FILE)
+        args = parser.parse_args()
+        body = args["employee"]
+
+        for idx, employee in enumerate(data):
+            if employee["name"].lower() == body['name'].lower():
+                data[idx] = body
+
+        dataFrame = pd.DataFrame.from_dict(data)
+        response = dataFrame.to_dict("records")
+        updateFile(JSON_FILE, response)
+
+        return response, 200
+
 api.add_resource(Employee, "/employee", "/employee/<name>")
 api.add_resource(Employees, "/", "/employees")
 
