@@ -87,5 +87,5 @@ Please explain how your code can be tested.
 - Update Employee: POST `/employee-update` and body
 - Delete Employee: DELETE `/employees`and body
 
-![Example](postman-test.jpg)
+![Example](postman-test.png)
 
